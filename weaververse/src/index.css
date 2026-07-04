@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+:root {
+  --obsidian: #0B0B0D;
+  --carbon: #17171B;
+  --carbon-light: #202026;
+  --crimson: #E63946;
+  --crimson-dim: #8f232b;
+  --cyan: #3DDCFF;
+  --silk: #F3EFE4;
+  --ash: #8A8A93;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--obsidian);
+  color: var(--silk);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-display {
+  font-family: 'Anton', 'Inter', sans-serif;
+  letter-spacing: 0.01em;
+}
+
+.font-mono {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+::selection {
+  background: var(--crimson);
+  color: var(--silk);
+}
+
+/* thin scrollbar for catalog rail */
+.thin-scroll::-webkit-scrollbar { width: 6px; }
+.thin-scroll::-webkit-scrollbar-thumb { background: var(--carbon-light); border-radius: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
